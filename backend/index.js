@@ -1,7 +1,7 @@
 require("./config/mongoose");
 const express = require("express");
 const app = express();
-const port = 8083;
+const port = process.env.PORT;
 const cors = require("cors");
 // const productRouter = require("./app/product/routes");
 const productRouterMongo = require("./app/product_mongo/router");
