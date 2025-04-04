@@ -1,6 +1,10 @@
+require("dotenv").config();
+
 const { MongoClient } = require("mongodb");
 
-const url = "mongodb://eduwork:Eduwork1234@localhost:27017?authSource=admin";
+const url = process.env.MONGO_URI;
+console.log("url nya mongodb bukan mongoose");
+console.log(url);
 const client = new MongoClient(url);
 
 (async () => {

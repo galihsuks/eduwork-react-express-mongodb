@@ -18,7 +18,7 @@ const Tambah = () => {
         (async () => {
             try {
                 const res = await fetch(
-                    `http://localhost:8083/api/mongoose/product`,
+                    `${process.env.REACT_APP_BACKEND_URL}/api/v2/product`,
                     {
                         method: "POST",
                         headers: {

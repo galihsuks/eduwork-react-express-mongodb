@@ -1,7 +1,9 @@
+require("dotenv").config();
 const mongoose = require("mongoose");
 
-const url =
-    "mongodb://eduwork:Eduwork1234@localhost:27017/eduwork?authSource=admin";
+const url = process.env.MONGO_URI;
+console.log("URI mongo");
+console.log(url);
 mongoose.connect(url);
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error: "));

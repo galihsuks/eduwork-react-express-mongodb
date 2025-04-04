@@ -11,7 +11,7 @@ const Home = () => {
             (async () => {
                 try {
                     const res = await fetch(
-                        "http://localhost:8083/api/mongoose/product"
+                        `${process.env.REACT_APP_BACKEND_URL}/api/v2/product`
                     );
                     const resJson = await res.json();
                     console.log(resJson);
@@ -24,7 +24,7 @@ const Home = () => {
             (async () => {
                 try {
                     const res = await fetch(
-                        `http://localhost:8083/api/mongoose/product/search`,
+                        `${process.env.REACT_APP_BACKEND_URL}/api/v2/product/search`,
                         {
                             method: "POST",
                             headers: {
@@ -55,7 +55,7 @@ const Home = () => {
             (async () => {
                 try {
                     const res = await fetch(
-                        `http://localhost:8083/api/mongoose/product/${id}`,
+                        `${process.env.REACT_APP_BACKEND_URL}/api/v2/product/${id}`,
                         {
                             method: "DELETE",
                             headers: {

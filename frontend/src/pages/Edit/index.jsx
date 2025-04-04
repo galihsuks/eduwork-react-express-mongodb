@@ -17,7 +17,7 @@ const Edit = () => {
         (async () => {
             try {
                 const res = await fetch(
-                    `http://localhost:8083/api/mongoose/product/${params.id}`
+                    `${process.env.REACT_APP_BACKEND_URL}/api/v2/product/${params.id}`
                 );
                 const resJson = await res.json();
                 console.log(resJson);
@@ -35,7 +35,7 @@ const Edit = () => {
         (async () => {
             try {
                 const res = await fetch(
-                    `http://localhost:8083/api/mongoose/product/${params.id}`,
+                    `${process.env.REACT_APP_BACKEND_URL}/api/v2/product/${params.id}`,
                     {
                         method: "PUT",
                         headers: {
